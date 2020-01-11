@@ -37,6 +37,7 @@ body main {
   background-image: url("../images/background-copy.png");
   position: relative;
   min-height: 100vh;
+  overflow: hidden;
 }
 @media (max-width: 560px) {
   body main {
