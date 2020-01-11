@@ -1,0 +1,182 @@
+$blue: #005c8d;
+$brown: #a56750;
+$mobile-width: 560px;
+
+body {
+  margin: 0;
+  display: grid;
+  grid-template-columns: 35vw 65vw;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+
+  @media(max-width: $mobile-width) {
+    grid-template-columns: 100vw;
+    grid-template-rows: 25vh;
+  }
+
+  #profileImage {
+    grid-column-start: 1;
+    grid-column-end: 2;
+
+    @media(max-width: $mobile-width) {
+      grid-row-start: 1;
+      grid-row-end: 2;
+
+      background-position: 50% 35%;
+      height: 25vh;
+      width: 100vw;
+    }
+
+    background-image: url("../images/golden may-0037-copy.jpg");
+    background-position: center;
+    position: fixed;
+
+    height: 100vh;
+    width: 35vw;
+    object-fit: cover;
+    transform: rotateY(180deg);
+  }
+
+  main {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    background-image: url("../images/background-copy.png");
+    position: relative;
+    min-height: 100vh;
+
+    @media(max-width: $mobile-width) {
+      grid-column-start: 1;
+      grid-column-end: 2;
+      grid-row-start: 2;
+      grid-row-end: 3;
+    }
+
+    #socialBar {
+      text-align: right;
+      padding: 2rem 8rem 0 6rem;
+
+      @media(max-width: 650px) {
+        text-align: center;
+        padding: 2rem 0;
+      }
+
+      a {
+        text-decoration: none;
+        display: inline-block;
+        width: 2rem;
+        height: 2rem;
+        background-color: white;
+        border-color: $brown;
+        padding: .5rem;
+        border-style: solid;
+        border-width: .25rem;
+        margin: .5rem;
+        box-shadow: 3px 3px 1rem #8a8a8a;
+
+        @media(max-width: $mobile-width) {
+          border-width: .1rem !important;
+        }
+
+        img {
+          width: 2rem;
+          height: 2rem;
+        }
+
+        &:first-of-type, &:last-of-type {
+          border-color: $blue;
+        }
+      }
+    }
+
+    #description {
+      font-size: 1.2rem;
+      padding: 2rem 8rem 0 6rem;
+
+      @media(max-width: 650px) {
+        padding: 2rem 4rem 0 2rem;
+      }
+
+      h1 {
+        font-weight: 100;
+      }
+
+      > div {
+        // signature block
+        text-align: right;
+        font-weight: 700;
+        font-size: 1.4rem;
+        padding-top: 1rem;
+
+        div {
+          img {
+            width: 350px;
+            max-width: 100%;
+            padding-bottom: .2rem;
+          }
+        }
+      }
+    }
+
+    nav {
+      // links block
+      position: absolute;
+      right: calc(-100px - 1.5rem);
+      transition: all .25s ease;
+      top: 10vh;
+
+      @media(max-width: $mobile-width) {
+        a {
+          border-width: .1rem !important;
+          font-size: .8rem !important;
+        }
+        img {
+          height: 80px !important;
+        }
+      }
+
+      &:hover {
+        right: 0;
+      }
+
+      a {
+        text-decoration: none;
+        text-align: center;
+        display: block;
+        padding: .5rem;
+        font-weight: 700;
+        font-size: 1.2rem;
+        background-color: white;
+        border-width: .5rem;
+        border-style: solid;
+        border-right: none;
+        margin: 1rem 0;
+        box-shadow: 3px 3px 1rem #8a8a8a;
+
+        h3 {
+          text-orientation: upright;
+          writing-mode: vertical-rl;
+          display: inline-block;
+          margin: 0;
+          vertical-align: super;
+        }
+
+        img {
+          height: 100px;
+          object-fit: contain;
+          padding: 1rem;
+          width: 100px;
+          vertical-align: super;
+        }
+
+        &:first-of-type {
+          color: $brown;
+          border-color: $brown;
+        }
+
+        &:last-of-type {
+          color: $blue;
+          border-color: $blue;
+        }
+      }
+    }
+  }
+}

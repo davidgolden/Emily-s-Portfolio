@@ -1,0 +1,161 @@
+body {
+  margin: 0;
+  display: grid;
+  grid-template-columns: 35vw 65vw;
+  font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+@media (max-width: 560px) {
+  body {
+    grid-template-columns: 100vw;
+    grid-template-rows: 25vh;
+  }
+}
+body #profileImage {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  background-image: url("../images/golden may-0037-copy.jpg");
+  background-position: center;
+  position: fixed;
+  height: 100vh;
+  width: 35vw;
+  object-fit: cover;
+  transform: rotateY(180deg);
+}
+@media (max-width: 560px) {
+  body #profileImage {
+    grid-row-start: 1;
+    grid-row-end: 2;
+    background-position: 50% 35%;
+    height: 25vh;
+    width: 100vw;
+  }
+}
+body main {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  background-image: url("../images/background-copy.png");
+  position: relative;
+  min-height: 100vh;
+}
+@media (max-width: 560px) {
+  body main {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    grid-row-start: 2;
+    grid-row-end: 3;
+  }
+}
+body main #socialBar {
+  text-align: right;
+  padding: 2rem 8rem 0 6rem;
+}
+@media (max-width: 650px) {
+  body main #socialBar {
+    text-align: center;
+    padding: 2rem 0;
+  }
+}
+body main #socialBar a {
+  text-decoration: none;
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  background-color: white;
+  border-color: #a56750;
+  padding: 0.5rem;
+  border-style: solid;
+  border-width: 0.25rem;
+  margin: 0.5rem;
+  box-shadow: 3px 3px 1rem #8a8a8a;
+}
+@media (max-width: 560px) {
+  body main #socialBar a {
+    border-width: 0.1rem !important;
+  }
+}
+body main #socialBar a img {
+  width: 2rem;
+  height: 2rem;
+}
+body main #socialBar a:first-of-type, body main #socialBar a:last-of-type {
+  border-color: #005c8d;
+}
+body main #description {
+  font-size: 1.2rem;
+  padding: 2rem 8rem 0 6rem;
+}
+@media (max-width: 650px) {
+  body main #description {
+    padding: 2rem 4rem 0 2rem;
+  }
+}
+body main #description h1 {
+  font-weight: 100;
+}
+body main #description > div {
+  text-align: right;
+  font-weight: 700;
+  font-size: 1.4rem;
+  padding-top: 1rem;
+}
+body main #description > div div img {
+  width: 350px;
+  max-width: 100%;
+  padding-bottom: 0.2rem;
+}
+body main nav {
+  position: absolute;
+  right: calc(-100px - 1.5rem);
+  transition: all 0.25s ease;
+  top: 10vh;
+}
+@media (max-width: 560px) {
+  body main nav a {
+    border-width: 0.1rem !important;
+    font-size: 0.8rem !important;
+  }
+  body main nav img {
+    height: 80px !important;
+  }
+}
+body main nav:hover {
+  right: 0;
+}
+body main nav a {
+  text-decoration: none;
+  text-align: center;
+  display: block;
+  padding: 0.5rem;
+  font-weight: 700;
+  font-size: 1.2rem;
+  background-color: white;
+  border-width: 0.5rem;
+  border-style: solid;
+  border-right: none;
+  margin: 1rem 0;
+  box-shadow: 3px 3px 1rem #8a8a8a;
+}
+body main nav a h3 {
+  text-orientation: upright;
+  writing-mode: vertical-rl;
+  display: inline-block;
+  margin: 0;
+  vertical-align: super;
+}
+body main nav a img {
+  height: 100px;
+  object-fit: contain;
+  padding: 1rem;
+  width: 100px;
+  vertical-align: super;
+}
+body main nav a:first-of-type {
+  color: #a56750;
+  border-color: #a56750;
+}
+body main nav a:last-of-type {
+  color: #005c8d;
+  border-color: #005c8d;
+}
+
+/*# sourceMappingURL=style.css.map */
