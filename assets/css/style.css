@@ -27,6 +27,7 @@ body #profileImage {
     grid-row-start: 1;
     grid-row-end: 2;
     background-position: 50% 35%;
+    background-size: 100%;
     height: 25vh;
     width: 100vw;
   }
@@ -150,7 +151,6 @@ body main nav a h3 {
   margin: 0;
   vertical-align: super;
   width: 20px;
-  height: 100px;
 }
 body main nav a img {
   height: 100px;
