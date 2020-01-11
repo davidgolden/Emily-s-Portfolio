@@ -115,6 +115,9 @@ body main nav {
   top: 10vh;
 }
 @media (max-width: 560px) {
+  body main nav h3 {
+    width: 30px;
+  }
   body main nav a {
     border-width: 0.1rem !important;
     font-size: 0.8rem !important;
@@ -146,6 +149,8 @@ body main nav a h3 {
   display: inline-block;
   margin: 0;
   vertical-align: super;
+  width: 20px;
+  height: 100px;
 }
 body main nav a img {
   height: 100px;

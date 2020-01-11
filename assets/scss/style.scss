@@ -126,10 +126,14 @@ body {
       // links block
       position: absolute;
       right: calc(-100px - 1.5rem);
+
       transition: all .25s ease;
       top: 10vh;
 
       @media(max-width: $mobile-width) {
+        h3 {
+          width: 30px;
+        }
         a {
           border-width: .1rem !important;
           font-size: .8rem !important;
@@ -163,6 +167,8 @@ body {
           display: inline-block;
           margin: 0;
           vertical-align: super;
+          width: 20px;
+          height: 100px;
         }
 
         img {
